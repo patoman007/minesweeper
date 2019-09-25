@@ -1,0 +1,17 @@
+<div class="wrapper">
+  <header>
+      <app-navbar></app-navbar>
+  </header>
+
+  <main>
+    <div class="game-container">
+      <app-game-status (refreshGame)="onGameRefreshed()"></app-game-status>
+      <app-board (tileFlagged)="onTileFlagged($event)" 
+                 (boardResolved)="onBoardResolved()" 
+                 (gameOver)="onGameOver()">
+      </app-board>
+    </div>
+  </main>
+
+  <footer></footer>
+</div>

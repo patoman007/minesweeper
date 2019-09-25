@@ -1,0 +1,42 @@
+.wrapper {
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 1 1 1;
+  border-top: 1px solid #CDCDCD;
+  border-right: 1px solid #CDCDCD;
+  border-left: 1px solid #CDCDCD;
+
+  div {
+    font-size: 18px;
+  }
+
+  .flags-count {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    justify-self: start;
+    align-self: center;
+  }
+
+  .game-status {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    justify-self: center;
+    align-self: center;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .game-time {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    justify-self: end;
+    align-self: center;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    padding: 10px;
+  }
+}

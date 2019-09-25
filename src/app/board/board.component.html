@@ -1,0 +1,16 @@
+<div class="board">
+  <ng-container *ngFor="let row of board">
+    <ul>
+      <ng-container *ngFor="let tile of row;">
+        <li class="disable-text-selection">
+          <app-tile appLongPress
+                    [model]="tile"
+                    (uncover)="clickHandler(tile)"
+                    (contextmenu)="rightClickHandler($event, tile)"
+                    (longPress)="longPressHandler(tile)">
+          </app-tile>
+        </li>
+      </ng-container>
+    </ul>
+  </ng-container>
+</div>

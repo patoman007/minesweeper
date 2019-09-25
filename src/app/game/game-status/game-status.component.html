@@ -1,0 +1,13 @@
+<div class="wrapper">
+  <div class="flags-count disable-text-selection">
+    {{ labels.flags }}
+  </div>
+
+  <div class="game-status disable-text-selection" (click)="onRefreshGame()">
+    {{ labels.state }}
+  </div>
+
+  <div class="game-time disable-text-selection">
+    {{ gameTime | gameTime }}
+  </div>
+</div>

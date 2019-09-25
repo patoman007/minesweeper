@@ -1,0 +1,18 @@
+<div class="wrapper">
+  <ng-container *ngIf="model.state === 'covered'; else tileTemplate">
+    <div class="tile covered" (click)="clickHandler()" #brick></div>
+  </ng-container>
+</div>
+
+<ng-template #tileTemplate>
+  <div class="tile" 
+       [ngClass]="{ 
+         'uncovered': model.state === 'uncovered',
+         'flagged': model.state === 'flagged',
+         'empty': model.state === 'uncovered' && model.value === 0
+     }">
+    <div class="content" *ngIf="model.state !== 'covered'">
+      {{ model.icon }}
+    </div>
+  </div>
+</ng-template>

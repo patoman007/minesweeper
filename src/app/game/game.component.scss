@@ -1,0 +1,36 @@
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+
+  header {
+    min-height: 45px;
+    padding: 0 12px;
+    line-height: 1mm;
+    background-color: #EFEFEF;
+    border-bottom: 1px solid #CDCDCD;
+    box-shadow: 0px 0px 5px 0px rgba(125, 125, 125, 0.5);
+  }
+
+  main {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  
+    .game-container {
+      display: inline-block;
+      padding: 10px;
+    }
+  }
+}
+
+@media screen and (min-widht: 768px) {
+  .wrapper {  
+    header {
+      min-height: 60px;
+      padding: 0 32px;
+    }
+  }
+}
